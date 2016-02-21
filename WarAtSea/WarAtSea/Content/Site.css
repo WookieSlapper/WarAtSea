@@ -51,7 +51,8 @@ li {
     height: 500px;
     width: 85%;
     text-align: center;
-    line-height: 500px;
+    line-height: 600px;
+    font-size: 1.2em;
     
     background: url("/Images/Telegram.jpg");
 }
@@ -59,7 +60,7 @@ li {
 .telegram-text {
     display: inline-block;
     vertical-align: middle;
-    line-height: 200%;
+    line-height: normal;
     width: inherit;
 }
 
