@@ -91,16 +91,16 @@ namespace WarAtSea.Utilities.Maps
                 return true;
         }
 
-        // In a regular hexagon the interior angles are 120 degrees. There are six "wedges," each an equilateral triangle with 
-        // 60-degree angles inside. Corner 'i' is at (60deg * i) size units away from the center.
-        public static PointF HexCorner(PointF center, float s, float unit)
-        {
-            var angleDegrees = 60 * unit;
-            var angleRadians = Convert.ToSingle(System.Math.PI / (180 * angleDegrees));
-            var point = (center.X + s * System.Math.Cos(angleRadians), center.Y + s * System.Math.Sin(angleRadians));
+        //// In a regular hexagon the interior angles are 120 degrees. There are six "wedges," each an equilateral triangle with 
+        //// 60-degree angles inside. Corner 'i' is at (60deg * i) size units away from the center.
+        //public static PointF HexCorner(PointF center, float s, float unit)
+        //{
+        //    var angleDegrees = 60 * unit;
+        //    var angleRadians = Convert.ToSingle(System.Math.PI / (180 * angleDegrees));
+        //    var point = (center.X + s * System.Math.Cos(angleRadians), center.Y + s * System.Math.Sin(angleRadians));
             
-            return point;
-        }
+        //    return point;
+        //}
 
     }
     

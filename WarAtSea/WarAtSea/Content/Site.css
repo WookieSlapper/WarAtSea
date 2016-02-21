@@ -27,7 +27,7 @@
     float: right;
     margin: auto;
     height: 25px;
-    width: 400px;
+    width: 50%;
     text-align: right;
 }
 
@@ -37,29 +37,39 @@
     }
 
 li {
-    display: inline;
+    display: inline-block;
+    clear: left;
     margin: 0px 10px;
-    font-size: 1.2em;
+    line-height: 120%;
 }
 
+.telegram {
+    margin: auto;
+    border-top: solid 10px #000;
+    border-bottom: solid 10px #000;
+    align-content: center;
+    height: 500px;
+    width: 85%;
+    text-align: center;
+    line-height: 500px;
+    
+    background: url("/Images/Telegram.jpg");
+}
+
+.telegram-text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 200%;
+    width: inherit;
+}
+
+.telegram-li {
+    display: block;
+    line-height: 200%;
+    width: inherit;
+}
 
 /* home page */
-.welcome {
-    margin: auto;
-    align-content: center;
-}
-
-#telegram {
-    margin: 30px auto 30px auto;
-}
-
-
-
-
-
-
-
-
 
 /* login page */
 #loginForm {
@@ -309,7 +319,7 @@ tr.pager td {
 /********************
 *   Mobile Styles   *
 ********************/
-@media only screen and (max-width: 850px) {
+@media only screen and (max-device-width: 480px) {
 
     /* header
     ----------------------------------------------------------*/
@@ -320,7 +330,7 @@ tr.pager td {
 
     /* logo */
     header .site-title {
-        margin: 10px;
+        margin: 10px !important;
         text-align: center;
     }
 

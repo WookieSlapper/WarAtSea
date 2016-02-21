@@ -26,13 +26,13 @@ namespace WarAtSea.Tests.Controllers
         }
 
         [TestMethod]
-        public void About()
+        public void Rules()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
+            ViewResult result = controller.Rules() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);

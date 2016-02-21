@@ -16,15 +16,21 @@
             </div>
                 <nav>
                      <ul id="menu">
-                          <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                          <li>@Html.ActionLink("About", "About", "Home")</li>
-                          <li>@Html.ActionLink("Build A Fleet", "Fleet", "Home")</li>
-                          <li>@Html.ActionLink("Play", "Play", "Home")</li>
+                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                         <li>@Html.ActionLink("Rules", "Rules", "Home")</li>
+                         <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                         <li>@Html.ActionLink("Fleets", "Build", "Fleet")</li>
+                         <li>@Html.ActionLink("Play", "Play", "Game")</li>
+                         <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
                      </ul>
                 </nav>
              </div>
         </header>
-
+        </br> @*Insert styling to add padding to the divs and get rid of line breaks*@
+        <div>
+            @ViewBag.Message
+        </div>
+        </br>
         <div id="body">
             <section>
                 @RenderBody()

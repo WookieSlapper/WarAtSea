@@ -10,21 +10,24 @@ namespace WarAtSea.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "War at Sea";
+            ViewBag.Title = "Home";
+            ViewBag.Message = "A Message from the Commander-in-Chief:";
 
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Rules()
         {
-            ViewBag.Message = "Your app description page.";
+            ViewBag.Title = "Rules";
+            ViewBag.Message = "Your Rules of Engagement:";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Title = "Contact";
+            ViewBag.Message = "Report to HQ:";
 
             return View();
         }
