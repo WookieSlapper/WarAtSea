@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace WarAtSea.Controllers
 {
@@ -19,5 +15,18 @@ namespace WarAtSea.Controllers
             return View();
         }
 
+        public ActionResult NewGame()
+        {
+            ViewBag.Title = "New Game";
+            //start new game data
+            return View();
+        }
+
+        public ActionResult ContinueGame()
+        {
+            ViewBag.Title = "Continue Game";
+            //get user and fetch old game data
+            return View();
+        }
     }
 }

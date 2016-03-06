@@ -1,0 +1,15 @@
+﻿<div class="canvas-container">
+     <canvas id="HexCanvas" width="1200" height="700">
+          Your browser does not support the HTML Canvas tag. Please update your browser to the newest version.
+     </canvas>
+     <script>
+         window.onload = window.onresize = function () {
+             var canvas = document.getElementById('canvas');
+             canvas.width = window.innerWidth * 1.0;
+             canvas.height = window.innerHeight * 1.0;
+         }
+
+          var hexagonGrid = new HexagonGrid("HexCanvas", 50);
+          hexagonGrid.drawHexGrid(7, 15, 50, 50, true);
+     </script>
+</div>

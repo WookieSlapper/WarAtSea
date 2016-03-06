@@ -252,10 +252,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Images\ocean_blue_by_zilenna_stock-d69e3ph.jpg" />
     <Content Include="Images\Telegram.jpg" />
     <Content Include="Images\TitleOcean.jpg" />
     <Content Include="Images\TitleOceanLarge.jpg" />
+    <Content Include="Images\zilenna_stock_deviantart_com_art_Ocean_blue_378571589.jpg" />
+    <Content Include="Scripts\Hexagon.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -311,6 +312,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Fleet\Build.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Game\_HexagonMap.cshtml" />
+    <Content Include="Views\Game\NewGame.cshtml" />
+    <Content Include="Views\Game\ContinueGame.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
