@@ -4,6 +4,9 @@
 {
     <form asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
+            <li><a asp-controller="Home" asp-action="Rules">Rules</a></li>
+            <li><a asp-controller="Fleet" asp-action="Fleets">Fleets</a></li>
+            <li><a asp-controller="Game" asp-action="Games">Games</a></li>
             <li>
                 <a asp-controller="Manage" asp-action="Index" title="Manage">Hello @User.GetUserName()!</a>
             </li>

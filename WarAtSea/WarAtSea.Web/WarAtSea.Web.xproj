@@ -18,6 +18,9 @@
     <DnxInvisibleContent Include="bower.json" />
     <DnxInvisibleContent Include=".bowerrc" />
     <DnxInvisibleContent Include="package.json" />
+    <DnxInvisibleContent Include="wwwroot\images\Photo06clCharybdis1NP.JPG" />
+    <DnxInvisibleContent Include="wwwroot\images\USS_Enterprise_(CV-6)_in_Puget_Sound,_September_1945.jpg" />
+    <DnxInvisibleContent Include="wwwroot\images\zero11444.jpg" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

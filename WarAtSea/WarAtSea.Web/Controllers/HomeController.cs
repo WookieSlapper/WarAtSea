@@ -13,6 +13,7 @@ namespace WarAtSea.Web.Controllers
 
         public IActionResult About()
         {
+            ViewBag.Title = "About";
             ViewData["Message"] = "Your application description page.";
 
             return View();
