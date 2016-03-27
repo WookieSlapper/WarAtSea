@@ -14,7 +14,7 @@ namespace WarAtSea.Web.Controllers
         public IActionResult About()
         {
             ViewBag.Title = "About";
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "A Briefing on War at Sea:";
 
             return View();
         }

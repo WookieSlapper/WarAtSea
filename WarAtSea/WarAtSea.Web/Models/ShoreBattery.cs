@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WarAtSea.Web.Models
 {
-    public class Games
+    public class ShoreBattery
     {
     }
 }

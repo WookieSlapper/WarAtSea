@@ -4,13 +4,10 @@
         <h2>@ViewData["Title"].</h2>
         <h3>@ViewData["Message"]</h3>
 
-        <ul>
-            <li class="telegram-li">SETUP</li>
-            <li class="telegram-li">FLEET BUILDING</li>
-            <li class="telegram-li">OPENING MOVES</li>
-            <li class="telegram-li">LARGER ENGAGEMENTS</li>
-            <li class="telegram-li">NIGHT FIGHTING</li>
-            <li class="telegram-li">SCENARIOS</li>
-        </ul>
+        <p class="telegram-li">@Html.ActionLink("FLEET BUILDING", "NewFleet", "Fleet")</p>
+        <p class="telegram-li">@Html.ActionLink("BASIC RULES", "EditFleet", "Fleet")</p>
+        <p class="telegram-li">@Html.ActionLink("ADVANCED RULES", "FleetBuildingRules", "Home")</p>
+        <p class="telegram-li">@Html.ActionLink("SCENARIOS", "Scenarios", "Home")</p>
+
     </div>
 </div>
