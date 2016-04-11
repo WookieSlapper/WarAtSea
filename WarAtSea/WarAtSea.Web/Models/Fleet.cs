@@ -27,16 +27,18 @@ namespace WarAtSea.Web.Models
         public int Year { get; set; }
 
         public List<Ship> Ships { get; set; }              // Not sure what this type is to be yet
-
         public List<Aircraft> Aircraft { get; set; }           // Not sure what this type should be yet
-
         public List<Submarine> Submarines { get; set; }         // Not sure what this type should be yet
-
         public List<ShoreBattery> ShoreBatteries { get; set; }     // Not sure what this type should be yet
 
         public int? GameId { get; set; }                                // Does each fleet need a current game Id? Or, maybe a list of game Ids?
 
         [Display(Name = "Fleet Description")]
         public string Description { get; set; }
+
+        public List<Unit> DestroyedUnits { get; set; }
+        public List<Unit> DamagedUnits { get; set; }
+
+        public bool FleetDeleted { get; set; }
     }
 }

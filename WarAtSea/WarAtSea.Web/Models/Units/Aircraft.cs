@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WarAtSea.Web.Models
 {
@@ -21,13 +20,5 @@ namespace WarAtSea.Web.Models
                 return "A";
             }
         }
-
-        public Dictionary<int?, int?> MainGuns { get; set; }
-
-        public Dictionary<int?, int?> AntiAir { get; set; }
-
-        public Dictionary<int?, int?> Torpedoes { get; set; }
-
-        public Dictionary<int?, int?> DepthCharges { get; set; }
     }
 }

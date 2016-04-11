@@ -30,6 +30,25 @@ namespace WarAtSea.Controllers
 
         public IActionResult AddUnit()
         {
+            ViewBag.Message = "Reinforcements En-Route";
+            return View();
+        }
+
+        public IActionResult RemoveUnit()
+        {
+            ViewBag.Message = "Transfer Orders Incoming";
+            return View();
+        }
+
+        public IActionResult DeleteUnit()
+        {
+            ViewBag.Message = "Decommission Requested";
+            return View();
+        }
+
+        public IActionResult UndoDeleteUnit()
+        {
+            ViewBag.Message = "Recall Underway";
             return View();
         }
 

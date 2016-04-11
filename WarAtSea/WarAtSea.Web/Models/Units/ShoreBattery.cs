@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace WarAtSea.Web.Models
+﻿namespace WarAtSea.Web.Models
 {
     public class ShoreBattery : Unit
     {
@@ -10,13 +8,5 @@ namespace WarAtSea.Web.Models
             Speed = 0;
             UnitTypeId = 4;
         }
-
-        public Dictionary<int?, int?> MainGuns { get; set; }
-
-        public Dictionary<int?, int?> AntiAir { get; set; }
-
-        public Dictionary<int?, int?> Torpedoes { get; set; }
-
-        public Dictionary<int?, int?> DepthCharges { get; set; }
     }
 }

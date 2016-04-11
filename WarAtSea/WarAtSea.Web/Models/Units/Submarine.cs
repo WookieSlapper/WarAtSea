@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace WarAtSea.Web.Models
+﻿namespace WarAtSea.Web.Models
 {
     public class Submarine : Unit
     {
@@ -9,7 +7,5 @@ namespace WarAtSea.Web.Models
             Type = "Submarine";
             UnitTypeId = 3;
         }
-
-        public Dictionary<int?, int?> Torpedoes { get; set; }
     }
 }
