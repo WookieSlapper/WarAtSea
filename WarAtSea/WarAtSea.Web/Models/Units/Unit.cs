@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WarAtSea.Web.Models
 {
@@ -60,6 +61,8 @@ namespace WarAtSea.Web.Models
         [Display(Name = "Hull Points")]
         public int? HullPoints { get; set; }
 
+        //It might be okay to move the various attack types back out to the subclasses of units to avoid loading unecessary info.
+        // This depends on whether "Unit" as a parameter type can be substituted by a unit type that inherits this class
         [Display(Name = "Main Guns")]
         public Dictionary<int?, int?> MainGuns { get; set; }
         public bool Attacked_Main { get; set; }

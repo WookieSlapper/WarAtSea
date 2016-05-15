@@ -1,34 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace WarAtSea.Web.Models
+namespace WarAtSea.Web.Models.Games
 {
-    public class Game
-    {
-        public int GameId { get; set; }
-        public IEnumerable<int> PlayerIds {get; set;}
-
-        public bool GameDeleted { get; set; }
-
-        //Start round
-        //End round
-        //Begin new round
-    }
-
-    public class Round
-    {
-        public int RoundId { get; set; }
-
-        public void RollInitiative()
-        {
-            var roller = new Utilities.Dice.DiceRoller();
-            roller.InitiativeRoll();
-        }
-
-        //PlayerTurn.StartPlayerTurn();
-        //PlayerTurn.EndPlayerTurn();
-        //Change players and start turn
-    }
-
     public class PlayerTurn
     {
         // Properties
@@ -58,14 +34,14 @@ namespace WarAtSea.Web.Models
             foreach (var intKey in attacks)
             {
                 foreach (var dictionary in intKey.Value)
-                if (dictionary.Key == range)
-                {
-                    var dice = new Utilities.Dice.DiceRoller();
-                    var attackValue = dictionary.Value;
-                    var rolls = dice.RollDice((int)attackValue);
-                    var hits = dice.CalculateHits(rolls);
-                    var results = dice.ApplyDamage(defendingUnit, hits);
-                }
+                    if (dictionary.Key == range)
+                    {
+                        var dice = new Utilities.Dice.DiceRoller();
+                        var attackValue = dictionary.Value;
+                        var rolls = dice.RollDice((int)attackValue);
+                        var hits = dice.CalculateHits(rolls);
+                        var results = dice.ApplyDamage(defendingUnit, hits);
+                    }
             }
 
             return defendingUnit;
@@ -98,6 +74,4 @@ namespace WarAtSea.Web.Models
             //rebase air units
         }
     }
-
-
 }
