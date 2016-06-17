@@ -4,8 +4,9 @@
     {
         public Submarine()
         {
-            Type = "Submarine";
-            UnitTypeId = 3;
+            HasTorpedoes = true;
+            UnitType = "Submarine";
+            Speed = 1;
         }
     }
 }

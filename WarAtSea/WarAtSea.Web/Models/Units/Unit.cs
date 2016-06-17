@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using WarAtSea.Web.Models.Weapons;
 
 namespace WarAtSea.Web.Models
 {
@@ -12,7 +13,7 @@ namespace WarAtSea.Web.Models
         [Required]
         [ScaffoldColumn(false)]
         [Key]
-        public int UnitId { get; set; }
+        public int ID { get; set; }
 
         [Required]
         [Display(Name = "Nationality")]
@@ -24,15 +25,10 @@ namespace WarAtSea.Web.Models
 
         [Required]
         [Display(Name = "Type")]
-        public string Type { get; set; }
-
-        [Required]
-        public int UnitTypeId { get; set; }
+        public string UnitType { get; set; }
 
         [Display(Name = "SubType")]
         public string SubType { get; set; }
-
-        public int? UnitSubTypeId { get; set; }
 
         [Required]
         [Display(Name = "Cost")]
@@ -42,12 +38,8 @@ namespace WarAtSea.Web.Models
         [Display(Name = "Speed")]
         public int Speed { get; set; }
 
-        [Required]
-        public int Year { get; set; }
-
-        //TODO: Not sure what type this should be : this will be basically a table of an attack type matched to a range from 0-3
-        [Display(Name = "Attack")]
-        public Dictionary<int, Dictionary<int?, int?>> Attack { get; set; }
+        [Display(Name = "Year")]
+        public int? Year { get; set; }
 
         [Required]
         [Display(Name = "Armor")]
@@ -61,45 +53,22 @@ namespace WarAtSea.Web.Models
         [Display(Name = "Hull Points")]
         public int? HullPoints { get; set; }
 
-        //It might be okay to move the various attack types back out to the subclasses of units to avoid loading unecessary info.
-        // This depends on whether "Unit" as a parameter type can be substituted by a unit type that inherits this class
-        [Display(Name = "Main Guns")]
-        public Dictionary<int?, int?> MainGuns { get; set; }
-        public bool Attacked_Main { get; set; }
-
-        [Display(Name = "Secondary Guns")]
-        public bool HasSecondaryGuns { get; set; }
-        public Dictionary<int?, int?> SecondaryGuns { get; set; }
-        public bool Attacked_Secondary { get; set; }
-
-        [Display(Name = "Tertiary Guns")]
-        public bool HasTertiaryGuns { get; set; }
-        public Dictionary<int?, int?> TertiaryGuns { get; set; }
-        public bool Attacked_Tertiary { get; set; }
-
-        [Display(Name = "Anti-Air Batteries")]
-        public bool HasAntiAir { get; set; }
-        public Dictionary<int?, int?> AntiAir { get; set; }
-        public bool Attacked_AntiAir { get; set; }
+        [Display(Name = "AntiAircraft Guns")]
+        public bool HasAntiAircraftGuns { get; set; }
 
         [Display(Name = "Torpedoes")]
         public bool HasTorpedoes { get; set; }
-        public Dictionary<int?, int?> Torpedoes { get; set; }
-        public bool Attacked_Torpedoes { get; set; }
 
         [Display(Name = "Depth Charge Launchers")]
         public bool HasDepthCharges { get; set; }
-        public Dictionary<int?, int?> DepthCharges { get; set; }
-        public bool Attacked_DepthCharges { get; set; }
 
         [Display(Name = "Unit Carrier or Transport")]
         public bool Carrier { get; set; }
 
-        [Display(Name = "Carry Capacity")]
-        public int? CarryingCapacity { get; set; }
+        [Display(Name = "Torpedo Defense")]
+        public bool HasTorpedoDefense { get; set; }
 
-        [Display(Name = "Unit Type")]
-        public List<int?> CarryUnitTypeId { get; set; }
+        
 
         public Dictionary<string, string> Abilities { get; set; }
 
@@ -108,6 +77,5 @@ namespace WarAtSea.Web.Models
         public bool Destroyed { get; set; }
 
         public bool UnitDeleted { get; set; }
-
     }
 }

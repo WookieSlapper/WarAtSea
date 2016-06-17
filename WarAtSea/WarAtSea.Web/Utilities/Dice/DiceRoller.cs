@@ -54,6 +54,7 @@ namespace WarAtSea.Web.Utilities.Dice
             var armor = unit.Armor;
             var vitalArmor = unit.VitalArmor;
 
+            //TODO: need to incorporate a way to reduce hit total if attack type is torpedo and ship has torpedo defense
             if (hits >= armor)
             {
                 if (hits >= vitalArmor)

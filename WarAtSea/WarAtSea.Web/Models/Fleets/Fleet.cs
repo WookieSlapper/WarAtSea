@@ -7,8 +7,9 @@ namespace WarAtSea.Web.Models
     {
         [ScaffoldColumn(false)]
         [Key]
-        public int FleetId { get; set; }
+        public int ID { get; set; }
 
+        [Required]
         [Display(Name = "Admiral")]
         public string PlayerName { get; set; }
 
@@ -16,7 +17,6 @@ namespace WarAtSea.Web.Models
         [Display(Name = "Name")]
         public string FleetName { get; set; }
 
-        [Required]
         [Display(Name = "Points")]
         public int PointValue { get; set; }
 
@@ -26,19 +26,17 @@ namespace WarAtSea.Web.Models
         [Display(Name = "Year")]
         public int Year { get; set; }
 
-        public List<Ship> Ships { get; set; }              // Not sure what this type is to be yet
-        public List<Aircraft> Aircraft { get; set; }           // Not sure what this type should be yet
-        public List<Submarine> Submarines { get; set; }         // Not sure what this type should be yet
-        public List<ShoreBattery> ShoreBatteries { get; set; }     // Not sure what this type should be yet
+        public ICollection<Ship> Ships { get; set; }              // Not sure what this type is to be yet
+        public ICollection<Aircraft> Aircraft { get; set; }           // Not sure what this type should be yet
+        public ICollection<Submarine> Submarines { get; set; }         // Not sure what this type should be yet
+        public ICollection<ShoreBattery> ShoreBatteries { get; set; }     // Not sure what this type should be yet
 
         public int? GameId { get; set; }                                // Does each fleet need a current game Id? Or, maybe a list of game Ids?
 
         [Display(Name = "Fleet Description")]
         public string Description { get; set; }
 
-        public List<Unit> DestroyedUnits { get; set; }
-        public List<Unit> DamagedUnits { get; set; }
-
-        public bool FleetDeleted { get; set; }
+        public ICollection<Unit> DestroyedUnits { get; set; }
+        public ICollection<Unit> DamagedUnits { get; set; }
     }
 }

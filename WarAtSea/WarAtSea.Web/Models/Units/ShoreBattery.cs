@@ -4,9 +4,9 @@
     {
         public ShoreBattery()
         {
-            Type = "ShoreBattery";
+            UnitType = "ShoreBattery";
             Speed = 0;
-            UnitTypeId = 4;
+            UnitTypeID = 4;
         }
     }
 }
