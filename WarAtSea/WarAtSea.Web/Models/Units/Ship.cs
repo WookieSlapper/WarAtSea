@@ -1,38 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
-using WarAtSea.Web.Models.Weapons;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WarAtSea.Web.Models
 {
-    public enum ShipSubType
-    {
-        Destroyer,
-        Cruiser,
-        Battleship,
-        Carrier,
-        Transport,
-        Auxilliary
-    }
-
     public class Ship : Unit
     {
-        public Ship()
+        public Ship(string unitSubType)
         {
             UnitType = "Ship";
+            SubType = unitSubType;
         }
 
-        [Required]
-        [Display(Name = "SubType")]
-        public new ShipSubType SubType { get; set; }
+        [Display(Name = "Carry Capacity")]
+        public int? CarryingCapacity { get; set; }
 
-        [Display(Name = "Main Guns")]
-        public MainGun MainGuns { get; set; }
-
-        [Display(Name = "Secondary Guns")]
-        public bool HasSecondaryGuns { get; set; }
-        public SecondaryGun SecondaryGuns { get; set; }
-
-        [Display(Name = "Tertiary Guns")]
-        public bool HasTertiaryGuns { get; set; }
-        public TertiaryGun TertiaryGuns { get; set; }
+        [Display(Name = "Unit Types Carried")]
+        public Dictionary<int, string> UnitTypesCarried { get; set; }
     }
 }

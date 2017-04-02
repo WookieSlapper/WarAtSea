@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNet.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,12 +13,12 @@ namespace WarAtSea.Web.Controllers
             return View();
         }
 
-        public IActionResult AddUnit(string unitType, int unitSubType)
+        public IActionResult AddUnit(string unitType, string unitSubType)
         {
             var unit = Models.Unit.CreateUnitByType(unitType, unitSubType);
 
             ViewBag.Message = "Commission a New Unit";
-            return PartialViewResult();
+            return PartialView("somePartial", unit);
         }
 
         public IActionResult EditUnit(int unitId)

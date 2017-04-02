@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WarAtSea.Web.Models
+﻿namespace WarAtSea.Web.Models
 {
     public class ShoreBattery : Unit
     {
@@ -8,12 +6,6 @@ namespace WarAtSea.Web.Models
         {
             UnitType = "ShoreBattery";
             Speed = 0;
-            UnitTypeID = 4;
-        }
-
-        internal static object CreateBattery()
-        {
-            throw new NotImplementedException();
         }
     }
 }

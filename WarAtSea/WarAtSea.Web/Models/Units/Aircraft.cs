@@ -22,25 +22,26 @@ namespace WarAtSea.Web.Models
             }
         }
 
-        [Required]
-        [Display(Name = "SubType")]
-        public string SubType { get; set; }
-
         [Display(Name = "Land Based")]
         public bool IsLandBased { get; set; }
 
+        [Display(Name= "Expert Fighter")]
         public bool ExpertFighter { get; set; }
+
+        [Display(Name= "Expert Bomber")]
         public bool ExpertBomber { get; set; }
+
+        [Display(Name= "High Level Bomber")]
         public bool HighLevelBomber { get; set; }
+
+        [Display(Name= "Defensive Armor")]
         public bool DefensiveArmor { get; set; }
+
+        [Display(Name= "Strafing")]
         public bool Strafing { get; set; }
 
-        // methods
-        internal static Aircraft CreateAircraft(string unitType, string unitSubType)
-        {
-            var aircraft = new Aircraft(unitSubType);
-            return aircraft;
-        }
+        [Display(Name = "Multi-Role")]
+        public bool MultiRole { get; set; }
     }
 }
 
