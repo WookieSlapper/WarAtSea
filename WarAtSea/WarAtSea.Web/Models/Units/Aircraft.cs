@@ -2,22 +2,17 @@
 
 namespace WarAtSea.Web.Models
 {
-    public enum AircraftSubType
-    {
-        Fighter,
-        DiveBomber,
-        TorpedoBomber,
-        Bomber
-    }
-
     public class Aircraft : Unit
     {
-        public Aircraft()
+        // constructors
+        public Aircraft(string unitSubType)
         {
             UnitType = "Aircraft";
             HullPoints = 1;
+            SubType = unitSubType;
         }
-        
+
+        // properties
         [Display(Name = "Speed")]
         public new string Speed
         {
@@ -29,7 +24,7 @@ namespace WarAtSea.Web.Models
 
         [Required]
         [Display(Name = "SubType")]
-        public new AircraftSubType SubType { get; set; }
+        public string SubType { get; set; }
 
         [Display(Name = "Land Based")]
         public bool IsLandBased { get; set; }
@@ -39,5 +34,14 @@ namespace WarAtSea.Web.Models
         public bool HighLevelBomber { get; set; }
         public bool DefensiveArmor { get; set; }
         public bool Strafing { get; set; }
+
+        // methods
+        internal static Aircraft CreateAircraft(string unitType, string unitSubType)
+        {
+            var aircraft = new Aircraft(unitSubType);
+            return aircraft;
+        }
     }
 }
+
+

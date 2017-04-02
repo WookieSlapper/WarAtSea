@@ -1,14 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using WarAtSea.Web.Models.Weapons;
+using System;
 
 namespace WarAtSea.Web.Models
 {
     public class Unit
     {
-        //Constructors
-
         // Properties
         [Required]
         [ScaffoldColumn(false)]
@@ -26,9 +23,6 @@ namespace WarAtSea.Web.Models
         [Required]
         [Display(Name = "Type")]
         public string UnitType { get; set; }
-
-        [Display(Name = "SubType")]
-        public string SubType { get; set; }
 
         [Required]
         [Display(Name = "Cost")]
@@ -68,8 +62,6 @@ namespace WarAtSea.Web.Models
         [Display(Name = "Torpedo Defense")]
         public bool HasTorpedoDefense { get; set; }
 
-        
-
         public Dictionary<string, string> Abilities { get; set; }
 
         public string Description { get; set; }
@@ -77,5 +69,23 @@ namespace WarAtSea.Web.Models
         public bool Destroyed { get; set; }
 
         public bool UnitDeleted { get; set; }
+
+        // methods
+        internal static object CreateUnitByType(string unitType, string unitSubType)
+        {
+            switch (unitType)
+            {
+                case "Aircraft":
+                    return Aircraft.CreateAircraft(unitType, unitSubType);
+                case "Ship":
+                    return Ship.CreateShip(unitType, unitSubType);
+                case "Submarine":
+                    return Submarine.CreateSub(unitType);
+                case "ShoreBattery":
+                    return ShoreBattery.CreateBattery(unitType);
+                default:
+                    throw new NotImplementedException();
+            }
+        }
     }
 }

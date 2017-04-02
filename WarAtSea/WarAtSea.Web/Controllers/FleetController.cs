@@ -8,7 +8,7 @@ namespace WarAtSea.Controllers
         //
         // GET: /Fleet/
 
-        public IActionResult Fleets()
+        public IActionResult FleetIndex()
         {
             ViewBag.Title = "Fleets";
             ViewBag.Message = "Call Your Units to Action:";
@@ -40,23 +40,6 @@ namespace WarAtSea.Controllers
             ViewBag.Message = "Transfer Orders Incoming";
             return View();
         }
-
-        public IActionResult DeleteUnit()
-        {
-            ViewBag.Message = "Decommission Requested";
-            return View();
-        }
-
-        public IActionResult UndoDeleteUnit()
-        {
-            ViewBag.Message = "Recall Underway";
-            return View();
-        }
-
-        //public IActionResult SaveNewUnit()
-        //{
-
-        //}
 
     }
 }

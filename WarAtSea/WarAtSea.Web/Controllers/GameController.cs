@@ -7,7 +7,7 @@ namespace WarAtSea.Controllers
         //
         // GET: /Games/
 
-        public IActionResult Games()
+        public IActionResult GameIndex()
         {
             ViewBag.Title = "Games";
             ViewBag.Message = "You Have Been Called to Battle:";
