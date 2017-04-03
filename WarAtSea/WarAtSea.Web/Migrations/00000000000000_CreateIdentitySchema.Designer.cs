@@ -10,7 +10,7 @@ using WarAtSea.Web.Models;
 
 namespace WarAtSea.Web.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(ApplicationDbContextModelSnapshot))]
     [Migration("00000000000000_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {

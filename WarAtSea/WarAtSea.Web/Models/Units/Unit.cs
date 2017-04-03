@@ -88,6 +88,9 @@ namespace WarAtSea.Web.Models
         [Display(Name = "Type")]
         public string UnitType { get; set; }
 
+        [DataType(DataType.Text)]
+        public string Message { get; set; }
+
         [Required]
         [Display(Name = "Vital Armor")]
         public int? VitalArmor { get; set; }

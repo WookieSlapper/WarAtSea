@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WarAtSea.Web.Models.Users;
 
 namespace WarAtSea.Web.Models
 {

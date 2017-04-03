@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNet.Mvc;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WarAtSea.Web.Controllers
 {
@@ -9,41 +6,41 @@ namespace WarAtSea.Web.Controllers
     {
         public IActionResult UnitIndex()
         {
-            ViewBag.Message = "Manage Units";
-            return View();
+            //ViewBag.Message = "Manage Units";
+            return viewResult();
         }
 
         public IActionResult AddUnit(string unitType, string unitSubType)
         {
             var unit = Models.Unit.CreateUnitByType(unitType, unitSubType);
 
-            ViewBag.Message = "Commission a New Unit";
-            return PartialView("somePartial", unit);
+            ViewData["Message"] = "Commission a New Unit";
+            return new ViewResult();
         }
 
         public IActionResult EditUnit(int unitId)
         {
-            ViewBag.Message = "Modifications Underway";
-            return PartialViewResult();
+            ViewData["Message"] = "Modifications Underway";
+            return new PartialViewResult();
         }
 
         public IActionResult DeleteUnit(int unitId)
         {
-            ViewBag.Message = "Decommission Requested";
-            return PartialViewResult();
+            ViewData["Message"] = "Decommission Requested";
+            return new PartialViewResult();
         }
 
         public IActionResult UndoDeleteUnit(int unitId)
         {
-            ViewBag.Message = "Recall Underway";
-            return View();
+            ViewData["Message"] = "Recall Underway";
+            return new PartialViewResult();
         }
 
         public IActionResult SaveUnit(Models.Unit viewModel)
         {
             //TODO: save the form
-            ViewBag.Message = "Launching Unit";
-            return View();
+            ViewData["Message"] = "Launching Unit";
+            return new ViewResult();
         }
     }
 }
